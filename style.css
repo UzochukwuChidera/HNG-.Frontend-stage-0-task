@@ -1,4 +1,6 @@
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -101,16 +103,194 @@ p {
   color: #4b5563;
 }
 
+/*CONTACT STYLING*/
+.contact-container {
+  max-width: 600px;
+  margin: 150px auto;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.contact-container h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+form {
+  
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 400px;
+  margin: auto;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  margin-top: 15px;
+  background: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+.error {
+  color: red;
+  font-size: 1rem;
+}
+
+.success {
+  color: green;
+  font-weight: bold;
+  text-align: center;
+}
+
+ 
+/* ABOUT PAGE STYLING */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  background: linear-gradient(to bottom, #6a0dad 50%, #001f3f 50%);
+  min-height: 100vh;
+}
+
+.page-links {
+  display: flex;
+  justify-content: flex-end; 
+  gap: 20px;
+  padding: 20px 40px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.page-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 14px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.page-links a:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+
+/* Intro section */
+.intro-section {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 30px;
+  padding: 60px 20px 40px;
+}
+
+.profile-pic img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.intro-text {
+  text-align: left;
+}
+
+.intro-text h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.intro-text p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  background-color: #2563eb;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+/* Info section */
+.about-container {
+  max-width: 1000px;
+  margin: 120px auto;
+  padding: 20px;
+}
+
+.about-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.info-card {
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(6px);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-5px);
+}
+
+.info-card h2 {
+  color: #2563eb;
+  margin-bottom: 10px;
+}
+
+.info-card p {
+  color: #e0e0e0;
+  line-height: 1.6;
+}
+
+ 
+
+
+
 /* 📱 Responsive Design */
-@media (max-width: 700px) {
+@media (max-width: 768px) {
   .card {
     flex-direction: column;
     align-items: center;
+    margin-top: 100px;
+    padding-top: 20px;
   }
 
   .avatar img {
     width: 100%;
     height: auto;
+    border-radius: 10px;
   }
 
   .info {
@@ -120,7 +300,38 @@ p {
   .social-links ul {
     justify-content: center;
   }
-  .hobbies ul{
-    text-decoration: none;
+    body {
+     background: linear-gradient(to bottom, #6a0dad 50%, #001f3f 50%);
+  }
+
+  .page-links {
+        flex-direction: row;
+    padding: 15px 20px;
+    gap: 15px;
+  }
+
+  .intro-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profile-pic img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .intro-text h1 {
+    font-size: 1.6rem;
+  }
+  .intro-text p{
+    margin-top: 5px;
+  }
+
+  .about-info {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-container {
+    margin: 80px 20px;
   }
 }
