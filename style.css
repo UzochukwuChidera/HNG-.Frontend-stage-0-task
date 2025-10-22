@@ -156,8 +156,10 @@ button:hover {
 
 .error {
   color: red;
-  font-size: 1rem;
+   font-weight: bold;
+  text-align: center;
 }
+
 
 .success {
   color: green;
